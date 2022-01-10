@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    password: username1
+    username: username
+    url: jdbc:mysql://database-robinfood-encuesta.crds1lhfxvlu.us-east-1.rds.amazonaws.com:3306/encuestaRobinFood?characterEncoding=utf8&serverTimezone=UTC&useSSL=false

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bc8e0df3-b031-4140-b048-2ffe5c20a53f" activeEnvironment="Default" name="RobinFood" resourceRoot="" soapui-version="5.6.1" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e6b6f342-2e42-44e5-86b5-12dfa2604908" wadlVersion="http://wadl.dev.java.net/2009/02" name="Api Documentation" type="rest" basePath="/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:description>Api Documentation</con:description><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:9000</con:endpoint></con:endpoints><con:resource name="/robinfood" path="/robinfood" id="6fbd6eb4-c3ca-44f2-a103-66b3b9829fec"><con:settings/><con:parameters/><con:method name="saveSurveyUsingPOST" id="40d11f38-f509-45c1-9cce-ee997c60950c" method="POST"><con:description>
+saveSurvey</con:description><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>201</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>403</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>415</con:status><con:params/></con:representation><con:representation type="REQUEST"><con:mediaType>application/x-www-form-urlencoded</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="aecb52a5-a437-49bd-83bc-8835fcc1270d" mediaType="application/json" postQueryString="false"><con:settings/><con:endpoint>http://localhost:9000</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="/robinfood/consult/{surveyname}" path="/robinfood/consult/{surveyname}" id="3bac9c31-ba9c-41b4-adee-7d9fbfa655ac"><con:settings/><con:parameters/><con:method name="getSurveyUsingGET" id="d58c8e0d-9947-4c6d-a25a-718a1a8d0e83" method="GET"><con:description>
+getSurvey</con:description><con:settings/><con:parameters><con:parameter required="true"><con:name>surveyname</con:name><con:style>TEMPLATE</con:style><con:description>surveyname</con:description></con:parameter></con:parameters><con:representation type="RESPONSE"><con:mediaType>*/*</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>*/*</con:mediaType><con:status>401</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>*/*</con:mediaType><con:status>403</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>*/*</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:request name="Request 1" id="8d08740b-4f3a-42a2-84b2-233bfb37acf5" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:9000</con:endpoint><con:parameters/></con:request></con:method></con:resource></con:interface><con:testSuite id="b70585e0-8fea-40e1-b258-1d64626aec49" name="TestCase"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="97d02a60-714e-4cb5-b376-16efce557b42" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="TestCase200ok" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="RESTEncuestaCreate" id="c62a7e40-0257-4f38-b3ab-8e7a32dcec2e"><con:settings/><con:config service="Api Documentation" resourcePath="//robinfood" methodName="saveSurveyUsingPOST" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="RESTEncuestaCreate" id="aecb52a5-a437-49bd-83bc-8835fcc1270d" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9000</con:endpoint><con:request>{
+  "descriptionSurvey": "for view animals",
+  "nameSurvey": "Animales",
+  "question": [
+    {
+      "optionAnswer": [
+        {
+          "id": "a",
+          "value": "coffe"
+        },
+        {
+          "id": "b",
+          "value": "yellow"
+        },
+        {
+          "id": "c",
+          "value": "red"
+        }
+      ],
+      "questionSurvey": "what is color the lion",
+      "questionType": "multi"
+    },
+    {
+      "optionAnswer": [
+        {
+          "id": "a",
+          "value": "coffe"
+        },
+        {
+          "id": "b",
+          "value": "yellow"
+        },
+        {
+          "id": "c",
+          "value": "red"
+        }
+      ],
+      "questionSurvey": "what is color the tiger",
+      "questionType": "multi"
+    },
+    {
+      "optionAnswer": [
+        {
+          "id": "1",
+          "value": ""
+        }
+      ],
+      "questionSurvey": "what is color the tiger",
+      "questionType": "open"
+    }
+  ]
+}</con:request><con:originalUri>http://localhost//robinfood</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="99328387-fb24-418c-bba5-9d859f997856" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="RESTConsultEncuesta" id="2f003e21-73f8-472d-ac18-81ead01afeac"><con:settings/><con:config service="Api Documentation" resourcePath="//robinfood/consult/{surveyname}" methodName="getSurveyUsingGET" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="RESTConsultEncuesta" id="8d08740b-4f3a-42a2-84b2-233bfb37acf5" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:9000</con:endpoint><con:request/><con:originalUri>http://localhost//robinfood/consult/Animales</con:originalUri><con:assertion type="Valid HTTP Status Codes" id="741f2e0f-7d42-4b59-8c51-6215ad4fd3da" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="surveyname" value="Animales" xmlns="http://eviware.com/soapui/config"/></con:parameters></con:restRequest></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

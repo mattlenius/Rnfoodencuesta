@@ -1,0 +1,22 @@
+/** ########### JACOCO CONFIGURATION  **/
+
+ext['basePackage'] = 'com/robinfood/encuesta'
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        xml.destination file("${buildDir}/coverage.xml")
+        html.destination file("${buildDir}/jacocoHtml")
+    }
+
+    afterEvaluate {
+        classDirectories.setFrom(files(classDirectories.files.collect {
+            fileTree(dir: it, exclude: ["${basePackage}/entity/**",
+                                        "${basePackage}/domain/**",
+                                        "${basePackage}/AdnServiceApplication.class",
+                                        "${basePackage}/configuration/**"])
+        }))
+    }
+
+
+}
