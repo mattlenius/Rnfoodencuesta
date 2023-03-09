@@ -52,7 +52,7 @@ _This project has acceptance tests developed with the soap ui, to run the tests 
 
 _To deploy the application you must take into account send the profile to be used by java arg, example -Dspring.profiles.active = dev_
 
-* The database is mounted in aws for greater ease and not having to use external applications to have to configure the database
+* The database is mounted in aws for greater ease and not having to use external applications to have to configure the database.
 
 ## Built with 🛠️
 
@@ -67,5 +67,5 @@ _To deploy the application you must take into account send the profile to be use
 
 ## Expressions of Gratitude 🎁
 
-* I want to thank the free market team for the opportunity to present this project
+* I want to thank the free market team for the opportunity to present this project.
 
